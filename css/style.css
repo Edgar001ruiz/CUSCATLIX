@@ -1,0 +1,286 @@
+/*  Estilos para la pagina Inicio */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.encabezado {
+    padding: 20px 50px;
+}
+
+.logo {
+    color: #E50914;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Perfiles del inicio */
+.caja-perfiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; 
+}
+
+.titulo-pregunta {
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.fila-botones {
+    display: flex;
+    gap: 30px; 
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.caja-boton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imagen-perfil {
+    width: 160px;
+    height: 160px;
+    object-fit: cover; 
+    border-radius: 5px;
+    border: 3px solid transparent; 
+    transition: transform 0.3s ease, border 0.3s ease; 
+    cursor: pointer;
+}
+
+.caja-boton:hover .imagen-perfil {
+    transform: scale(1.1); 
+    border: 3px solid white; 
+}
+
+.texto-boton {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    color: #808080; 
+    transition: color 0.3s ease;
+}
+
+.caja-boton:hover .texto-boton {
+    color: #ffffff; 
+}
+
+/* Estilos para la pagina Origenes */
+
+/* Modificación del encabezado para que flote sobre la imagen */
+.encabezado-secundario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; 
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0,0,0,0) 100%);
+}
+
+.boton-volver {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.boton-volver:hover {
+    color: #E50914; 
+}
+
+/* Banner de portada estilo película */
+.contenedor-banner {
+    position: relative;
+    width: 100%;
+    height: 70vh; 
+}
+
+.imagen-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.degradado-banner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #141414 0%, transparent 60%, rgba(0,0,0,0.4) 100%);
+}
+
+.contenido-banner {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    z-index: 5;
+}
+
+.titulo-pelicula {
+    font-size: 4.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    margin-bottom: 10px;
+}
+
+.subtitulo-pelicula {
+    font-size: 1.8rem;
+    color: #a3a3a3;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Información general debajo del banner */
+.contenedor-informacion {
+    display: flex;
+    gap: 50px;
+    padding: 0 50px 50px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.columna-texto {
+    flex: 2; 
+}
+
+.texto-narrativo {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #d2d2d2; 
+}
+
+.texto-narrativo strong {
+    color: white; 
+}
+
+.columna-imagen {
+    flex: 1; 
+    display: flex;
+    align-items: flex-start;
+}
+
+.imagen-secundaria {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+
+/*  Estilos para la pagina Expedientes */
+
+/* Espacio superior para que el encabezado no tape el título */
+.titulo-seccion-expedientes {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+.titulo-seccion-expedientes h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.titulo-seccion-expedientes p {
+    color: #a3a3a3;
+    font-size: 1.2rem;
+}
+
+/* Contenedor central de la lista de expedientes */
+.contenedor-expedientes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+
+    margin: 0 auto 100px auto;
+
+    padding: 0 20px;
+}
+
+/* Diseño de la tarjeta horizontal */
+.tarjeta-expediente {
+    display: flex;
+    background-color: #1a1a1a; 
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+    border-left: 5px solid #E50914; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    height: 400px; /* ¡NUEVO! Fijamos la altura de todas las tarjetas */
+}
+
+/* Efecto al pasar el mouse */
+.tarjeta-expediente:hover {
+    transform: translateY(-5px); 
+    background-color: #222222; 
+}
+
+/* Variación de posicion de imagenes */
+.tarjeta-expediente:nth-child(even) {
+    flex-direction: row-reverse;
+    border-left: none; 
+    border-right: 5px solid #E50914; 
+}
+
+/* Imagen del expediente */
+.expediente-imagen {
+    width: 40%; 
+    height: 100%;
+    object-fit: cover;
+    padding: 30px;
+}
+
+/* Texto */
+.expediente-contenido {
+    width: 60%; 
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Scroll */
+}
+
+/* Diseño del scroll */
+.expediente-contenido::-webkit-scrollbar {
+    width: 8px;
+}
+.expediente-contenido::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+}
+.expediente-contenido::-webkit-scrollbar-thumb {
+    background-color: #E50914; 
+    border-radius: 4px;
+}
+
+.expediente-contenido h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    color: #ffffff;
+    flex-shrink: 0; /* Evita que el título se encoja al scrollear */
+}
+
+
