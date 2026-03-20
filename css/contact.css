@@ -1,103 +1,109 @@
-body{ 
-background-color:black;
-font-family:Arial, sans-serif;
-margin:0;
-color:white;
+body { 
+    background-color: #141414; /* Color de fondo unificado */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: white;
 }
 
-h2{
-text-align:bold;
-background:#cc0000;
-padding:15px;
-margin:0;
+h2 {
+    font-weight: bold; /* Corregido */
+    text-align: center; /* Centrado */
+    background: transparent; /* Fondo transparente */
+    border-top: 2px solid #E50914; /* Borde rojo arriba */
+    border-bottom: 2px solid #E50914; /* Borde rojo abajo */
+    padding: 20px;
+    margin: 30px auto; /* Separación superior e inferior */
+    width: 50%; /* No ocupa toda la pantalla */
+    color: white;
 }
 
-form{
-width:450px;
-margin:50px auto;
+form {
+    width: 450px;
+    margin: 50px auto;
 }
 
-fieldset{
-background:white;
-color:black;
-padding: 40px;
-border-radius: 10px;
-border: none;
-position: relative;
+fieldset {
+    background: white;
+    color: black;
+    padding: 40px;
+    border-radius: 10px;
+    border: none;
+    position: relative;
 }
 
-legend{
-font-weight:bold;
-color:#cc0000;
-padding: 0%;
-padding:5px 10px;
-border-radius:10px;
-top: 15px;
-position: relative;
+legend {
+    font-weight: bold;
+    color: #E50914; /* Rojo Cuscatlix */
+    padding: 5px 10px;
+    border-radius: 10px;
+    top: 15px;
+    position: relative;
+    background: white; 
 }
 
-input, select, textarea{
-width:100%;
-padding:10px;
-margin-top:5px;
-border-radius:5px;
-border:1px solid #ccc;
-box-sizing: border-box;
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-input:focus, textarea:focus, select:focus{
-outline:none;
-border:1px solid #cc0000;
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border: 1px solid #E50914;
 }
 
-input[type="submit"]{
-background:#cc0000;
-color:white;
-border:none;
-padding:10px;
-cursor:pointer;
+input[type="submit"] {
+    background: #E50914;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
-input[type="reset"]{
-background:#555;
-color:white;
-border:none;
-padding:10px;
-cursor:pointer;
+input[type="reset"] {
+    background: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
-input[type="submit"]:hover{
-background:#a30000;
+input[type="submit"]:hover {
+    background: #a30000;
 }
 
-#redes{
-margin:20px auto;
+#redes {
+    margin: 20px auto;
 }
 
-#redes td{
-padding:10px;
+#redes td {
+    padding: 10px;
 }
 
-#redes img{
-width:40px;
-border-radius:50%; 
-background:white;
-padding:5px;
+#redes img {
+    width: 40px;
+    border-radius: 50%; 
+    background: white;
+    padding: 5px;
+    transition: transform 0.3s ease; /* Transición para que no sea brusco */
 }
 
-#redes img:hover{
-transform:scale(1.2);
+#redes img:hover {
+    transform: scale(1.2);
 }
 
-footer{
-background:black;
-text-align:center;
-padding:20px;
+footer {
+    background: #000; /* Fondo del footer más oscuro */
+    text-align: center;
+    padding: 20px;
 }
 
-footer p{
-background:#cc0000;
-padding:10px;
-margin-top:15px;
-color:white;
+footer p {
+    background: #E50914;
+    padding: 10px;
+    margin-top: 15px;
+    color: white;
 }

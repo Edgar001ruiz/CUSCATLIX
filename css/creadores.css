@@ -84,11 +84,10 @@ body {
 /* IMAGEN */
 .foto-perfil {
     width: 100%;
-    height: 250px;
     object-fit: cover;
     object-position: 50% 20%;  /* ajuste más preciso */
     border-bottom: 2px solid #E50914;
-    height: 450px
+    height: 380px
 }
 
 /* INFO */
