@@ -1,0 +1,103 @@
+body{ 
+background-color:black;
+font-family:Arial, sans-serif;
+margin:0;
+color:white;
+}
+
+h2{
+text-align:bold;
+background:#cc0000;
+padding:15px;
+margin:0;
+}
+
+form{
+width:450px;
+margin:50px auto;
+}
+
+fieldset{
+background:white;
+color:black;
+padding: 40px;
+border-radius: 10px;
+border: none;
+position: relative;
+}
+
+legend{
+font-weight:bold;
+color:#cc0000;
+padding: 0%;
+padding:5px 10px;
+border-radius:10px;
+top: 15px;
+position: relative;
+}
+
+input, select, textarea{
+width:100%;
+padding:10px;
+margin-top:5px;
+border-radius:5px;
+border:1px solid #ccc;
+box-sizing: border-box;
+}
+
+input:focus, textarea:focus, select:focus{
+outline:none;
+border:1px solid #cc0000;
+}
+
+input[type="submit"]{
+background:#cc0000;
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
+}
+
+input[type="reset"]{
+background:#555;
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
+}
+
+input[type="submit"]:hover{
+background:#a30000;
+}
+
+#redes{
+margin:20px auto;
+}
+
+#redes td{
+padding:10px;
+}
+
+#redes img{
+width:40px;
+border-radius:50%; 
+background:white;
+padding:5px;
+}
+
+#redes img:hover{
+transform:scale(1.2);
+}
+
+footer{
+background:black;
+text-align:center;
+padding:20px;
+}
+
+footer p{
+background:#cc0000;
+padding:10px;
+margin-top:15px;
+color:white;
+}
