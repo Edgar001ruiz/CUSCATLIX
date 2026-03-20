@@ -1,6 +1,3 @@
-/* =========================================
-   RESETEO GENERAL PA QUE NO SE ROMPA NADA
-   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -13,9 +10,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* =========================================
-   MENU MULTINIVEL - NIVEL 3 (AL FIN QUEDO)
-   ========================================= */
+/*   MENU MULTINIVEL - NIVEL 3 */
 
 /* ESTA ES LA BARRA NEGRA DE ARRIBA */
 .barra-navegacion {
@@ -66,9 +61,7 @@ body {
     color: #E50914; /* SE PONE ROJO CUANDO PASAS EL MOUSE */
 }
 
-/* =========================================
-   SUBMENUS (NIVEL 2 Y 3)
-   ========================================= */
+/*  SUBMENUS (NIVEL 2 Y 3) */
 
 /* NIVEL 2 - EL PRIMER CUADRO QUE BAJA */
 .submenu {
@@ -103,14 +96,14 @@ body {
     background-color: #333;
 }
 
-/* NIVEL 3 - EL MENU QUE SALE HACIA LA DERECHA (EL QUE PIDE EL PROFE) */
+/* NIVEL 3 - EL MENU QUE SALE HACIA LA DERECHA */
 .submenu-nivel3 {
     display: none;
     position: absolute;
     top: 0; 
     left: 100%; /* SE ABRE A LA DERECHA DEL OTRO MENU */
     background-color: #1a1a1a;
-    min-width: 240px; /* ESPACIO PA LOS LINKS DE YOUTUBE Y SPOTIFY */
+    min-width: 240px; /* ESPACIO PA LOS LINKS DEL YUTU Y SPOTIFY */
     list-style: none;
     padding: 10px 0;
     border-radius: 5px;
@@ -123,9 +116,8 @@ body {
     display: block;
 }
 
-/* =========================================
-   ESTILOS PARA EL INDEX (PANTALLA DE PERFILES)
-   ========================================= */
+
+/*  ESTILOS PARA EL INDEX (PANTALLA DE PERFILES) */
 .contenedor-principal {
     display: flex;
     flex-direction: column;
@@ -200,10 +192,8 @@ body {
     color: #ffffff; 
 }
 
-/* =========================================
-   ESTILOS PARA LA PAGINA DE ORIGENES
-   YA NO DOY MAS, ME SIENTO MAS DEBIL QUE ESCANOR DE NOCHE MAQUETANDO ESTO
-   ========================================= */
+/*  ESTILOS PARA LA PAGINA DE ORIGENES
+   YA NO DOY MAS, ME SIENTO MAS DEBIL QUE ESCANOR DE NOCHE MAQUETANDO ESTO */
 
 /* EL BANNER GIGANTE DE LA PELICULA */
 .contenedor-banner {
@@ -284,10 +274,9 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.6);
 }
 
-/* =========================================
-   ESTILOS PARA LA PAGINA EXPEDIENTES
-   (AL FIN LA ULTIMA SECCION POR HOY)
-   ========================================= */
+
+/*  ESTILOS PARA LA PAGINA EXPEDIENTES
+   (AL FIN LA ULTIMA SECCION POR HOY) */
 
 .titulo-seccion-expedientes {
     text-align: center;
@@ -376,10 +365,8 @@ body {
 }
 
 
-/* =========================================
-   ESTILOS PARA LA GALERIA DE IMAGENES
-   YA CASI TERMINAMOS, UN CAFE MAS Y CORONO
-   ========================================= */
+/* ESTILOS PARA LA GALERIA DE IMAGENES
+   YA CASI TERMINAMOS, UN CAFE MAS Y CORONO*/
 
 .contenedor-pagina-galeria {
     max-width: 1200px;
@@ -409,7 +396,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Centra y recorta la foto bonito sin deformarla */
-    transition: transform 0.4s ease; /* Transicion suave pal hover */
+    transition: transform 0.4s ease; /* Transicion pal hover */
 }
 
 /* EFECTO NETFLIX AL PASAR EL MOUSE (ESTOY EN MI MAYOR MOMENTO DE ESQUISOFRENIA XD) */
