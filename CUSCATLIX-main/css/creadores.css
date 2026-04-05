@@ -1,0 +1,242 @@
+/* ====== CONFIGURACIÓN GENERAL ====== */
+body {
+    background-color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* ====== HEADER ====== */
+.encabezado-secundario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 20px 40px;
+    border-bottom: 2px solid #E50914;
+}
+
+/* LOGO */
+.logo {
+    color: #E50914;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/*   MENU MULTINIVEL - NIVEL 3 */
+
+/* ESTA ES LA BARRA NEGRA DE ARRIBA */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.95); /* MEDIO TRANSPARENTE */
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #E50914; 
+}
+
+/* EL LOGO ROJO A LA DERECHA */
+.nav-logo a {
+    color: #E50914;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* NIVEL 1 - LA LISTA DE BOTONES A LA IZQUIERDA */
+.menu-principal {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* ESPACIO PA QUE RESPIREN Y NO SE VEA AMONTONADO */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-principal > li {
+    position: relative; 
+}
+
+/* ESTILO DE LOS TEXTOS DEL MENU */
+.menu-principal a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 10px 15px; 
+}
+
+.menu-principal a:hover {
+    color: #E50914; /* SE PONE ROJO CUANDO PASAS EL MOUSE */
+}
+
+/*  SUBMENUS (NIVEL 2 Y 3) */
+
+/* NIVEL 2 - EL PRIMER CUADRO QUE BAJA */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #1a1a1a;
+    min-width: 220px; 
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+    border: 1px solid #333;
+}
+
+/* QUE APAREZCA EL NIVEL 2 AL PASAR EL MOUSE */
+.tiene-submenu:hover > .submenu {
+    display: block;
+}
+
+.submenu li {
+    position: relative; 
+}
+
+.submenu a {
+    padding: 12px 20px;
+    font-size: 1rem;
+}
+
+.submenu a:hover {
+    background-color: #333;
+}
+
+/* NIVEL 3 - EL MENU QUE SALE HACIA LA DERECHA */
+.submenu-nivel3 {
+    display: none;
+    position: absolute;
+    top: 0; 
+    left: 100%; /* SE ABRE A LA DERECHA DEL OTRO MENU */
+    background-color: #1a1a1a;
+    min-width: 240px; /* ESPACIO PA LOS LINKS DEL YUTU Y SPOTIFY */
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+    border: 1px solid #E50914; /* BORDE ROJO PA QUE DESTAQUE MAS */
+}
+
+/* QUE APAREZCA EL NIVEL 3 */
+.tiene-submenu-lateral:hover > .submenu-nivel3 {
+    display: block;
+}
+
+/* ====== TÍTULO DE SECCIÓN ====== */
+.titulo-seccion-expedientes {
+    text-align: center;
+    padding: 10px;
+}
+
+.titulo-seccion-expedientes h2 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.titulo-seccion-expedientes p {
+    color: #b3b3b3;
+    font-size: 16px;
+}
+
+/* ====== CONTENEDOR DE CREADORES ====== */
+.contenedor-creadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+/* TARJETAS */
+.tarjeta-creador {
+    background-color: #141414;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #222;
+}
+
+/* EFECTO HOVER */
+.tarjeta-creador:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+}
+
+/* IMAGEN */
+.foto-perfil {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 20%;  /* ajuste más preciso */
+    border-bottom: 2px solid #E50914;
+    height: 380px
+}
+
+/* INFO */
+.creador-info {
+    padding: 20px;
+}
+
+.creador-info h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.rol {
+    color: #E50914;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 600px) {
+    .contenedor-creadores {
+        padding: 20px;
+    }
+
+    .foto-perfil {
+        height: 200px;
+    }
+}
+
+/* Esto es el footer del sitio web */
+/* No hay convertsación conmigo mismo, ya me sentí triste responder mis propios mensajes */
+
+#redes {
+    margin: 20px auto;
+}
+
+#redes td {
+    padding: 10px;
+}
+
+#redes img {
+    width: 50px;
+    transition: transform 0.3s ease; /* Transición */
+}
+
+#redes img:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    background: #000; /* Fondo más oscuro */
+    text-align: center;
+    padding: 1px;
+}
+
+footer p {
+    background: #E50914;
+    padding: 10px;
+    margin-top: 15px;
+    color: white;
+}
