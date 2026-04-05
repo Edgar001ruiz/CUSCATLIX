@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.encabezado {
+    padding: 20px 50px;
+}
+
+.logo {
+    color: #E50914;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/*  Estilos para la pagina Expedientes */
+
+/* Espacio superior para que el encabezado no tape el título */
+.titulo-seccion-expedientes {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+.titulo-seccion-expedientes h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.titulo-seccion-expedientes p {
+    color: #a3a3a3;
+    font-size: 1.2rem;
+}
+
+/* Contenedor central de la lista de expedientes */
+.contenedor-expedientes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+
+    margin: 0 auto 100px auto;
+
+    padding: 0 20px;
+}
+
+.boton-volver {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.boton-volver:hover {
+    color: #E50914; 
+}
+
+/* Diseño de la tarjeta horizontal */
+.tarjeta-expediente {
+    display: flex;
+    background-color: #1a1a1a; 
+    border-radius: 8px;
+    overflow: hidden; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+    border-left: 5px solid #E50914; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    height: 400px; /* ¡NUEVO! Fijamos la altura de todas las tarjetas */
+}
+
+/* Efecto al pasar el mouse */
+.tarjeta-expediente:hover {
+    transform: translateY(-5px); 
+    background-color: #222222; 
+}
+
+/* Variación de posicion de imagenes */
+.tarjeta-expediente:nth-child(even) {
+    flex-direction: row-reverse;
+    border-left: none; 
+    border-right: 5px solid #E50914; 
+}
+
+/* Imagen del expediente */
+.expediente-imagen {
+    width: 40%; 
+    height: 100%;
+    object-fit: cover;
+    padding: 30px;
+}
+
+/* Texto */
+.expediente-contenido {
+    width: 60%; 
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Scroll */
+}
+
+/* Diseño del scroll */
+.expediente-contenido::-webkit-scrollbar {
+    width: 8px;
+}
+.expediente-contenido::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+}
+.expediente-contenido::-webkit-scrollbar-thumb {
+    background-color: #E50914; 
+    border-radius: 4px;
+}
+
+.expediente-contenido h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    color: #ffffff;
+    flex-shrink: 0; /* Evita que el título se encoja al scrollear */
+}
+
+/* Esto es el footer del sitio web */
+/* Hola yo */
+/* Hola yo como estás estoy acá tomando en cuenta las observaciones */
+/* Yo también */
+
+#redes {
+    margin: 20px auto;
+}
+
+#redes td {
+    padding: 10px;
+}
+
+#redes img {
+    width: 50px;
+    transition: transform 0.3s ease; /* Transición */
+}
+
+#redes img:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    background: #000; /* Fondo más oscuro */
+    text-align: center;
+    padding: 1px;
+}
+
+footer p {
+    background: #E50914;
+    padding: 10px;
+    margin-top: 15px;
+    color: white;
+}
