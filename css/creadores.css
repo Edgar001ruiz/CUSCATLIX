@@ -172,21 +172,22 @@ body {
 
 /* IMAGEN */
 .foto-perfil {
-    width: 100%;
+    width: auto;
     object-fit: cover;
     object-position: 50% 20%;  /* ajuste más preciso */
     border-bottom: 2px solid #E50914;
-    height: 380px
+    padding-top: 25px;
+    height: 180px;
 }
 
 /* INFO */
 .creador-info {
-    padding: 20px;
+    padding-bottom: 20px;
 }
 
 .creador-info h3 {
     color: #ffffff;
-    font-size: 18px;
+    font-size: 12px;
     margin-bottom: 10px;
 }
 
