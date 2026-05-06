@@ -312,9 +312,11 @@ body {
     overflow: hidden; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.8);
     border-left: 5px solid #E50914; 
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Esta línea ayuda a que la animación y el hover no choquen */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
     height: 400px; 
 }
+
 
 .tarjeta-expediente:hover {
     transform: translateY(-5px); 
@@ -440,3 +442,164 @@ footer p {
     margin-top: 15px;
     color: white;
 }
+
+/* TITULOS DE CATEGORIAS */
+.titulo-categoria {
+    border-left: 5px solid #E50914;
+    padding-left: 15px;
+    margin: 40px 0 20px 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+/* ESTILO PARA LA BIBLIOTECA */
+.cuadricula-recursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-recurso {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+}
+
+.tarjeta-recurso:hover {
+    transform: translateY(-10px);
+    border-color: #E50914;
+}
+
+.icono-recurso {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.btn-leer {
+    display: inline-block;
+    margin-top: 20px;
+    color: #E50914;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/* SECCION VIDEOS */
+.cuadricula-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.item-video h3 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+.item-galeria {
+    position: relative;
+}
+
+.overlay-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(229, 9, 20, 0.8);
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.item-galeria:hover .overlay-info {
+    transform: translateY(0);
+}
+
+/* ESTILOS DE MULTIMEDIA Y TRANSFORMACIONES */
+
+.enlace-video {
+    text-decoration: none;
+}
+
+.portada-video {
+    position: relative;
+    width: 100%;
+    height: 215px;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #333;
+    transition: border-color 0.3s ease;
+}
+
+.portada-video img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: transform 0.5s ease, filter 0.3s ease; /* TRANSFORMACIÓN */
+}
+
+/* BOTON PLAY */
+.boton-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrado*/
+    background-color: rgba(229, 9, 20, 0.8);
+    color: white;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* TRANSFORMACIONES */
+
+.item-video:hover .portada-video img {
+    transform: scale(1.2); /* Zoom img */
+    filter: brightness(1); /* Opacidad */
+}
+
+.item-video:hover .boton-play {
+    transform: translate(-50%, -50%) scale(1.2); /* EL PLAY SE AGRANDA */
+    background-color: #E50914; /* ROJO BRILLANTE */
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+}
+
+.item-video:hover .portada-video {
+    border-color: #E50914;
+}
+
+/* SISTEMA DE ANIMACIONES MEJORADO */
+@keyframes entradaSuave {
+    0% {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animar-entrada {
+    /* Si la animación no carga, esto hace que se muestre */
+    animation: entradaSuave 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Retrasos */
+.retraso-1 { animation-delay: 0.2s; }
+.retraso-2 { animation-delay: 0.4s; }
+.retraso-corto { animation-delay: 0.1s; }
+.retraso-medio { animation-delay: 0.3s; }
