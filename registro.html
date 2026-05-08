@@ -48,49 +48,57 @@
 
     <h2>Contacto Cuscatlix</h2>
     
-    <form>
-        <fieldset>
-            <legend>Datos de contacto</legend>
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
-            <br><br>
+    <form action="procesar.php" method="POST" class="formulario-cuscatlix">
+    <fieldset>
+        <legend>Contacto</legend>
 
-            <label for="correo">Correo:</label><br>
-            <input type="email" id="correo" name="correo" placeholder="correo@email.com" required>
-            <br><br>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej. Aida Quintanilla" 
+               pattern="^[a-zA-Z\s]+$" title="Solo letras y espacios" required>
 
-            <label for="telefono">Teléfono:</label><br>
-            <input type="tel" id="telefono" name="telefono" required>
-            <br><br>
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="mortalika666@ejemplo.com" required>
 
-            <label for="tema">Selecciona punto de consulta:</label><br>
-            <select id="tema" name="tema" required>
-                <option>Leyendas Cuscatlecas</option>
-                <option>Enviar historia</option>
-                <option>Dudas</option>
-                <option>Otro</option>
-            </select>
-            <br><br>
+        <label for="telefono">Teléfono de contacto:</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="22220000" 
+               pattern="[0-9]{8}" title="Debe ingresar exactamente 8 números" required>
 
-            <label for="mensaje">Deja tu comentario</label><br>
-            <textarea id="mensaje" name="mensaje" rows="5" cols="30" style="resize: none;"></textarea>
-            <br><br>
+        <label for="tema">Motivo de consulta:</label>
+        <select id="tema" name="tema" required>
+            <option value="" disabled selected>Seleccione</option>            
+            <option value="leyendas">Leyendas Cuscatlecas</option>
+            <option value="historia">Enviar historia</option>
+            <option value="otro">Otro</option>
+        </select>
 
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Borrar">
-        </fieldset>
-    </form>
+        <div class="contenedor-dinamico">
+    <p class="etiqueta-p">¿Deseas compartir un relato?</p>
+        
+    <div class="switches-relato">
+        <input type="radio" name="trigger" id="opcion-si" class="radio-toggle">
+        <label for="opcion-si" class="btn-seleccion si">SÍ</label>
 
-    <footer>
-        <table id="redes">
-            <tr>
-                <td><a href="https://www.facebook.com/share/v/18DWLWujza/" target="_blank"><img src="img/fb.png" alt="Facebook"></a></td>
-                <td><a href="https://x.com/i/status/2034630977826558211" target="_blank"><img src="img/tw.png" alt="Twitter"></a></td>
-                <td><a href="https://www.youtube.com/@Conseilyherreralara78" target="_blank"><img src="img/yt.png" alt="YouTube"></a></td>
-            </tr>
-        </table>
-        <p>Copyright © 2026 Grupo Cuscatlix.</p>
-    </footer>
+        <input type="radio" name="trigger" id="opcion-no" class="radio-toggle" checked>
+        <label for="opcion-no" class="btn-seleccion no">NO</label>
 
+        <div class="seccion-revelada">
+            <label for="relato-detallado">Relato del encuentro:</label>
+            <textarea id="relato-detallado" name="relato_detallado" rows="6" placeholder="Cuéntanos tu historia con detalle..."></textarea>
+            
+            <label for="archivo" class="mt-10">Adjuntar evidencia (opcional):</label>
+            <input type="file" id="archivo" name="archivo" class="input-file">
+        </div>
+    </div>
+</div>
+
+        <label for="mensaje">Comentario:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos tu experiencia..."></textarea>
+
+        <div class="botones-form">
+            <input type="submit" value="Enviar Reporte">
+            <input type="reset" value="Limpiar">
+        </div>
+    </fieldset>
+</form>
 </body>
 </html>
