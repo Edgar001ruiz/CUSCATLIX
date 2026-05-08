@@ -1,0 +1,251 @@
+/*   MENU MULTINIVEL - NIVEL 3 */
+
+/* ESTA ES LA BARRA NEGRA DE ARRIBA */
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(20, 20, 20, 0.95);
+    padding: 15px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid rgb(229, 9, 20);
+}
+
+/* EL LOGO ROJO A LA DERECHA */
+.nav-logo a {
+    color: #E50914;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+/* NIVEL 1 - LA LISTA DE BOTONES A LA IZQUIERDA */
+.menu-principal {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* ESPACIO PA QUE RESPIREN Y NO SE VEA AMONTONADO */
+    margin: 0;
+    padding: 0;
+}
+
+.menu-principal > li {
+    position: relative; 
+}
+
+/* ESTILO DE LOS TEXTOS DEL MENU */
+.menu-principal a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  display: block;
+  padding: 10px 15px;
+}
+
+.menu-principal a:hover {
+    color: #E50914; /* SE PONE ROJO CUANDO PASAS EL MOUSE */
+}
+
+/*  SUBMENUS (NIVEL 2 Y 3) */
+
+/* NIVEL 2 - EL PRIMER CUADRO QUE BAJA */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #1a1a1a;
+    min-width: 220px; 
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+    border: 1px solid #333;
+}
+
+/* QUE APAREZCA EL NIVEL 2 AL PASAR EL MOUSE */
+.tiene-submenu:hover > .submenu {
+    display: block;
+}
+
+.submenu li {
+    position: relative; 
+}
+
+.submenu a {
+    padding: 12px 20px;
+    font-size: 1rem;
+}
+
+.submenu a:hover {
+    background-color: #333;
+}
+
+/* NIVEL 3 - EL MENU QUE SALE HACIA LA DERECHA */
+.submenu-nivel3 {
+    display: none;
+    position: absolute;
+    top: 0; 
+    left: 100%; /* SE ABRE A LA DERECHA DEL OTRO MENU */
+    background-color: #1a1a1a;
+    min-width: 240px; /* ESPACIO PA LOS LINKS DEL YUTU Y SPOTIFY */
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+    border: 1px solid #E50914; /* BORDE ROJO PA QUE DESTAQUE MAS */
+}
+
+/* QUE APAREZCA EL NIVEL 3 */
+.tiene-submenu-lateral:hover > .submenu-nivel3 {
+    display: block;
+}
+
+/* OCULTAR CHECKBOXES */ 
+#menu-toggle, .toggle, .tiene-submenu input, .tiene-submenu-lateral input { 
+    display: none; 
+} 
+.menu-icon { 
+    display: none; 
+} 
+
+/* MENU MULTINIVEL - NIVEL 3 FINAL */
+
+/* RESPONSIVO PARA EL MENÚ TOGGLE NIVEL 3 */ 
+@media (max-width: 768px){ 
+    body{
+        padding-top: 60px;
+    }
+
+    /* BARRA */ 
+    .barra-navegacion{ 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        flex-direction: column;
+        align-items: stretch; 
+        padding: 0; 
+    }
+
+    /* LOGO */
+    .nav-logo{ 
+        display: none; 
+    } 
+    
+    /* BOTON HAMBURGUESA */ 
+    .menu-icon{ 
+        display: block; 
+        background: black; 
+        color: red; 
+        padding: 15px; 
+        cursor: pointer; 
+        font-size: 1.3rem; 
+        text-align: right; 
+        font-weight: bold; 
+    } 
+    
+    /* TITULO */ 
+    .menu-icon::before{ 
+        content: "CUSCATLIX"; 
+        float: left; 
+    } 
+    
+    /* MENU OCULTO */ 
+    .menu-principal{ 
+        display: none; 
+        flex-direction: column; 
+        width: 100%; 
+        background: black; 
+        gap: 0; 
+    } 
+    
+    /* ABRIR MENU */ 
+    #menu-toggle:checked + .menu-icon + .menu-principal{ 
+        display: flex; 
+    } 
+    
+    /* ITEMS */ 
+    
+    .menu-principal li{ 
+        width: 100%; 
+        position: relative; 
+    } 
+    
+    /* LINKS */ 
+    
+    .menu-principal a, .toggle-label{ 
+        display: block; 
+        padding: 15px; 
+        text-align: center; 
+        color: red; 
+        text-decoration: none; 
+        font-weight: bold; 
+        border-top: 1px solid rgba(0,0,0,0.2); 
+    } 
+    
+    /* QUITAR HOVER PC */ 
+    .tiene-submenu:hover > .submenu, .tiene-submenu-lateral:hover > .submenu-nivel3{ 
+        display: none; 
+    } 
+    /* TOGGLES */ 
+    .toggle{ 
+        display: block; 
+        background: black; 
+        color: red; 
+        cursor: pointer; 
+        font-weight: bold; 
+        text-align: center; 
+        padding: 15px; 
+    } 
+    
+    /* OCULTAR LINKS DESKTOP */ 
+    .toggle + a{ 
+        display: none; 
+    } 
+    
+    /* SUBMENUS */ 
+    .submenu, .submenu-nivel3{ 
+        display: none; 
+        position: static; 
+        width: 100%; 
+        background: #441414; 
+        box-shadow: none; 
+        border: none; 
+        padding: 0; 
+    } 
+    
+    /* ABRIR NIVEL 2 */ 
+    #evidencias-toggle:checked + .toggle + a + .submenu{ 
+        display: block; 
+    } 
+    
+    /* ABRIR NIVEL 3 PODCAST */ 
+    #podcast-toggle:checked + .toggle + a + .submenu-nivel3{ 
+        display: block; 
+    } 
+    
+    /* ABRIR NIVEL 3 VIDEOS */ 
+    #videos-toggle:checked + .toggle + a + .submenu-nivel3{ 
+        display: block; 
+    } 
+    
+    /* COLOR NIVEL 2 */ 
+    .submenu .toggle{ 
+        background: rgb(68, 20, 20); 
+    } 
+    /* COLOR NIVEL 3 */ 
+    .submenu-nivel3 a{ 
+        background: rgb(112, 15, 15); color: white; 
+    } 
+    
+    /* LINKS NIVEL 3 */ 
+    .submenu-nivel3 a:hover{ 
+        background: #3d4fa3; } 
+}

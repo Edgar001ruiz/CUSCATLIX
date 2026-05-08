@@ -7,23 +7,31 @@
     <link rel="icon" type=imagen/jpg href="img/LogoCuscatlix.ICO">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/creadores.css">
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
     
-    <nav class="barra-navegacion">
+<nav class="barra-navegacion">
+    <!-- BOTÓN HAMBURGUESA -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
 
-        <div class="menu-hamburguesa" id="btn-hamburguesa">
-            ☰
-        </div>
         <ul class="menu-principal">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="expedientes.html">Expedientes</a></li>
             <li><a href="galeria.html">Galería</a></li>
+
+            <!-- NIVEL 1 :P -->
+        <li class="tiene-submenu">
+            <input type="checkbox" id="evidencias-toggle">
+            <label for="evidencias-toggle" class="toggle">Evidencia ▼</label>
+            <a href="#">Evidencias ▼</a>
             
-            <li class="tiene-submenu">
-                <a href="#">Evidencias ▼</a>
+            <!-- NIVEL 2 Y EL NIVEL 3 .v. -->
                 <ul class="submenu">
                     <li class="tiene-submenu-lateral">
+                        <input type="checkbox" id="podcast-toggle">
+                        <label for="podcast-toggle" class="toggle">Podcasts ▼</label>
                         <a href="#">Podcasts ►</a>
                         <ul class="submenu-nivel3">
                             <li><a href="https://open.spotify.com/search/leyendas%20el%20salvador" target="_blank">Relatos de la Noche</a></li>
@@ -31,7 +39,10 @@
                             <li><a href="https://open.spotify.com/search/siguanaba%20podcast" target="_blank">Voces del Más Allá</a></li>
                         </ul>
                     </li>
+
                     <li class="tiene-submenu-lateral">
+                        <input type="checkbox" id="videos-toggle">
+                        <label for="videos-toggle" class="toggle">Videos ▼</label>
                         <a href="#">Videos ►</a>
                         <ul class="submenu-nivel3">
                             <li><a href="https://www.youtube.com/results?search_query=avistamiento+siguanaba" target="_blank">Avistamiento: La Siguanaba</a></li>
@@ -40,7 +51,8 @@
                         </ul>
                     </li>
                 </ul>
-            </li>
+            
+        </li>
          <li><a href="registro.html">Contacto</a></li>
          <li><a href="creadores.html">Creadores</a></li>
         </ul>
@@ -48,7 +60,7 @@
         <div class="nav-logo">
             <a href="index.html">CUSCATLIX</a>
         </div>
-    </nav>
+</nav>
 
     <div class="titulo-seccion-expedientes animar-entrada">
         <h2>Equipo de Desarrollo</h2>

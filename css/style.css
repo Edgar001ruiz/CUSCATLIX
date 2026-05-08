@@ -564,6 +564,27 @@ footer p {
     transition: all 0.3s ease;
 }
 
+/* BOTÓN DE DESCARGA PDF */
+.btn-descarga {
+    display: inline-block;
+    background-color: #E50914; /* Rojo Cuscatlix */
+    color: #ffffff;
+    padding: 15px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-descarga:hover {
+    background-color: #b20710; /* Rojo más oscuro */
+    color: #ffffff;
+    transform: translateY(-5px) scale(1.02); /* Se levanta un poco */
+    box-shadow: 0 10px 20px rgba(229, 9, 20, 0.4);
+}
 /* TRANSFORMACIONES */
 
 .item-video:hover .portada-video img {
@@ -614,6 +635,124 @@ footer p {
     cursor: pointer;
     user-select: none;
 }
+
+/* SLIDE INTENTO */ 
+.slider { 
+    display: block; 
+    position: relative; 
+    margin: 25px auto; 
+    width: 100%;
+    max-width: 460px; 
+    max-height: 307px; 
+    overflow: hidden; 
+    border: none; 
+    background: none; 
+    box-shadow: 0px 0px 50px #500b0b; 
+} 
+
+.boton { 
+    position: absolute; 
+    display: block; 
+    bottom: 12px; 
+    margin: 0; 
+    padding: 0; 
+    z-index: 999; 
+    opacity: 0; 
+    cursor: pointer; 
+} 
+
+.boton:nth-child(1) { 
+    left: 10px; 
+} 
+
+.boton:nth-child(3) { 
+    left: 40px; 
+} 
+
+.boton:nth-child(5) { 
+    left: 70px; 
+} 
+
+.boton:nth-child(7) { 
+    left: 100px; 
+} 
+
+.slider label { 
+    position: absolute; 
+    width: 12px; 
+    bottom: 12px; 
+    height: 12px; 
+    background: white; 
+    border-radius: 7px; 
+    z-index: 100; 
+} 
+
+.slider label:nth-child(2) { 
+    left: 10px; 
+} 
+
+.slider label:nth-child(4) { 
+    left: 40px; 
+} 
+
+.slider label:nth-child(6) { 
+    left: 70px; 
+} 
+    
+.slider label:nth-child(8) { 
+    left: 100px; 
+} 
+
+.boton:checked + label { 
+    background: red; 
+    border-color: #eee; 
+} 
+
+.contenedor-img img { 
+    width: 25%;
+    height: 307px;
+    object-fit: cover;
+    border: none;
+    display: block; 
+} 
+
+.slider-imagenes { 
+    width: 400%; 
+} 
+
+.slider-imagenes img { 
+    width: 100%; 
+    border: none; 
+} 
+
+.contenedor-img{ 
+    position: relative; 
+    width: 400%; 
+    display: flex; 
+    transition: left .3s ease-in; 
+    -webkit-transition: left .3s ease-in; 
+    left: 0; 
+} 
+
+.boton:nth-child(1):checked ~ .contenedor-img { 
+    left: 0%; 
+} 
+
+.boton:nth-child(3):checked ~ .contenedor-img { 
+    left: -100%; 
+} 
+
+.boton:nth-child(5):checked ~ .contenedor-img { 
+    left: -200%; 
+} 
+
+.boton:nth-child(7):checked ~ .contenedor-img { 
+    left: -300%; 
+}
+
+html, body{       
+    overflow-x: hidden;
+}   
 
 
 /*  DISEÑO RESPONSIVE (MÓVILES Y TABLETS)*/

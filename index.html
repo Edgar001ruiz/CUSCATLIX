@@ -6,23 +6,31 @@
     <title>CUSCATLIX - Inicio</title>
     <link rel="icon" type=imagen/jpg href="img/LogoCuscatlix.ICO">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
     
-    <nav class="barra-navegacion">
-        <div class="menu-hamburguesa" id="btn-hamburguesa">
-            ☰
-        </div>
-        
+<nav class="barra-navegacion">
+    <!-- BOTÓN HAMBURGUESA -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
         <ul class="menu-principal">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="expedientes.html">Expedientes</a></li>
             <li><a href="galeria.html">Galería</a></li>
+
+            <!-- NIVEL 1 :P -->
+        <li class="tiene-submenu">
+            <input type="checkbox" id="evidencias-toggle">
+            <label for="evidencias-toggle" class="toggle">Evidencia ▼</label>
+            <a href="#">Evidencias ▼</a>
             
-            <li class="tiene-submenu">
-                <a href="#">Evidencias ▼</a>
+            <!-- NIVEL 2 Y EL NIVEL 3 .v. -->
                 <ul class="submenu">
                     <li class="tiene-submenu-lateral">
+                        <input type="checkbox" id="podcast-toggle">
+                        <label for="podcast-toggle" class="toggle">Podcasts ▼</label>
                         <a href="#">Podcasts ►</a>
                         <ul class="submenu-nivel3">
                             <li><a href="https://open.spotify.com/search/leyendas%20el%20salvador" target="_blank">Relatos de la Noche</a></li>
@@ -30,7 +38,10 @@
                             <li><a href="https://open.spotify.com/search/siguanaba%20podcast" target="_blank">Voces del Más Allá</a></li>
                         </ul>
                     </li>
+
                     <li class="tiene-submenu-lateral">
+                        <input type="checkbox" id="videos-toggle">
+                        <label for="videos-toggle" class="toggle">Videos ▼</label>
                         <a href="#">Videos ►</a>
                         <ul class="submenu-nivel3">
                             <li><a href="https://www.youtube.com/results?search_query=avistamiento+siguanaba" target="_blank">Avistamiento: La Siguanaba</a></li>
@@ -39,7 +50,8 @@
                         </ul>
                     </li>
                 </ul>
-            </li>
+            
+        </li>
          <li><a href="registro.html">Contacto</a></li>
          <li><a href="creadores.html">Creadores</a></li>
         </ul>
@@ -47,12 +59,7 @@
         <div class="nav-logo">
             <a href="index.html">CUSCATLIX</a>
         </div>
-        
-    </nav>
-
-
-
-
+</nav>
 
     <div class="contenedor-banner">
         <img src="img/portada-origenes.jpg" alt="Paisaje de El Salvador" class="imagen-banner">
@@ -79,12 +86,29 @@
             <p class="texto-narrativo">
                 Te invitamos a recorrer los senderos de Cuscatlán, donde lo real y lo mágico se encuentran en cada esquina. <strong>¿Te atreves a escuchar lo que la noche tiene que decir?</strong>
             </p>
+            <a href="proyecto.pdf" download="Proyecto_Cuscatlix.pdf" class="btn-descarga animar-entrada retraso-2">
+                📄 Descargar PDF del Proyecto
+            </a>
 
             </div>
         
-        <div class="columna-imagen animar-entrada retraso-2">
-            <img src="img/imagen-cultura.jpg" alt="Ruinas" class="imagen-secundaria">
-        </div>
+        <article class="slider columna-texto animar-entrada retraso-2">
+				<input type="radio" class="boton" name="boton" checked="checked">
+                <label></label>
+                <input type="radio" class="boton" name="boton">
+                <label></label>
+                <input type="radio" class="boton" name="boton">
+                <label></label>
+                <input type="radio" class="boton" name="boton">
+                <label></label>
+
+                <section class="contenedor-img slider-imagenes">
+                    <img src="img/imagen-cultura.jpg"/>
+                    <img src="img/imagen-cultura1.jpg"/>
+                    <img src="img/imagen-cultura2.jpg"/>
+                    <img src="img/imagen-cultura3.jpg"/>
+				</section>
+			</article>
     </main>
 
      <footer>
