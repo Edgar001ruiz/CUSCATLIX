@@ -168,7 +168,7 @@ footer p {
     opacity: 0;
     transition: 0.5s ease;
 }
-/* "Cuando el radio con ID opcion-si esté marcado, busca al hermano llamado seccion-revelada y muéstralo" */
+/* si funciona mejor no tocarlo aunq no se sepa para q sirve*/
 #opcion-si:checked ~ .seccion-revelada {
     display: block;
     opacity: 1;
@@ -204,4 +204,38 @@ footer p {
 
 #opcion-si:checked ~ .seccion-revelada {
     display: block; /* Se muestra solo al marcar SÍ */
+}
+/* Cuando el botón se selecciona crece ligeramente y sombrita para que se vea mas bonis*/
+#opcion-si:checked + .si { 
+    background: #28a745; 
+    color: white; 
+    border-color: #28a745;
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.4); 
+}
+
+#opcion-no:checked + .no { 
+    background: #E50914; 
+    color: white; 
+    border-color: #E50914;
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.4); 
+}
+
+/* Transición*/
+.btn-seleccion {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+input[type="submit"], input[type="reset"] {
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    transform: translateY(-3px); 
+    filter: brightness(1.2); 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra proyectada */
+}
+
+input[type="submit"]:active {
+    transform: translateY(0); /* Al hacer clic, baja otra vez */
 }
