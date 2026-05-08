@@ -603,3 +603,64 @@ footer p {
 .retraso-2 { animation-delay: 0.4s; }
 .retraso-corto { animation-delay: 0.1s; }
 .retraso-medio { animation-delay: 0.3s; }
+
+
+
+/* Ocultar el botón */
+.menu-hamburguesa {
+    display: none;
+    color: #E50914; /* Rojo Cuscatlix */
+    font-size: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+/*  DISEÑO RESPONSIVE (MÓVILES Y TABLETS)*/
+
+@media (max-width: 768px) {
+    /* Mantenemos el logo y el botón en la misma línea */
+    .barra-navegacion {
+        flex-direction: row; 
+        justify-content: space-between;
+        padding: 15px 30px;
+        position: relative; /* Importante para que el menú baje desde aquí */
+    }
+
+    /* Mostrar el botón en móviles */
+    .menu-hamburguesa {
+        display: block;
+    }
+    
+    /* Esconder la lista de enlaces por defecto */
+    .menu-principal {
+        display: none; /* ¡Aquí está la magia para que no ocupe toda la pantalla! */
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(20, 20, 20, 0.98);
+        position: absolute;
+        top: 100%; /* Se coloca justo debajo de la barra negra */
+        left: 0;
+        padding: 20px 0;
+        border-bottom: 2px solid #E50914;
+    }
+
+    /* Esta clase se activará con JavaScript para mostrar el menú */
+    .menu-principal.activo {
+        display: flex;
+    }
+
+    .menu-principal > li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Ajustes para los submenús para que no se desborden */
+    .submenu, .submenu-nivel3 {
+        position: static;
+        min-width: 100%;
+        box-shadow: none;
+        border: none;
+        border-left: 2px solid #E50914;
+    }
+}
